@@ -31,6 +31,8 @@ namespace interview.Controllers
             bool res = _dal.Insert_User(model);
             if (res)
             {
+
+
                 return RedirectToAction("Index");
             }
             else
