@@ -1,4 +1,4 @@
-﻿using interview.DAL;
+using interview.DAL;
 using interview.Models;
 using Microsoft.AspNetCore.Mvc;
 
