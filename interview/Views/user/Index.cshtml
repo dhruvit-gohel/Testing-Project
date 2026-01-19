@@ -1,0 +1,41 @@
+﻿@model List<interview.Models.User_Data>
+
+<form>
+	<button asp-controller="User" asp-action="Create" class="btn btn-success mb-3">Create New User</button>
+	<table class="table table-responsive table-hover">
+		<thead>
+			<tr class="table-active">
+				<th>User ID</th>
+				<th>User Name</th>
+				<th>Passsword</th>
+				<th>First Name</th>
+				<th>Middle Name</th>
+				<th>Last Name</th>
+				<th>Mobile No</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			@if (Model!=null &&Model.Any())
+			{
+				
+			}
+			@foreach (var user_Data in Model)
+			{
+				<tr>
+					<td>@user_Data.User_Id</td>
+					<td>@user_Data.User_Name</td>
+					<td>@user_Data.User_password</td>
+					<td>@user_Data.User_First_Name</td>
+					<td>@user_Data.User_Middle_Name</td>
+					<td>@user_Data.User_Last_Name</td>
+					<td>@user_Data.User_Mobile_No</td>
+					<td>
+						<a asp-controller="User" asp-action="Edit" asp-route-id="@user_Data.User_Id" class="btn btn-primary">Edit</a>
+						<a asp-controller="User" asp-action="Delete" asp-route-id="@user_Data.User_Id" class="btn btn-danger">Delete</a>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</form>

@@ -1,0 +1,42 @@
+﻿@model interview.Models.User_Data
+
+<form action="Create" method="post">
+	<div class="mb-3">
+		<label class="form-label">User Name</label>
+		<input type="text" class="form-control" asp-for="User_Name" />
+		<span asp-validation-for="User_Name" class="text-danger"></span>
+	</div>
+	<div class="mb-3">
+		<label class="form-label">Password</label>
+		<input type="text" class="form-control" asp-for="User_password" />
+		<span asp-validation-for="User_password" class="text-danger"></span>
+	</div>
+	<div class="mb-3">
+		<label class="form-label">First Name</label>
+		<input type="text" class="form-control" asp-for="User_First_Name" />
+		<span asp-validation-for="User_First_Name" class="text-danger"></span>
+	</div>
+	<div class="mb-3">
+		<label class="form-label">Middle Name</label>
+		<input type="text" class="form-control" asp-for="User_Middle_Name" />
+		<span asp-validation-for="User_Middle_Name" class="text-danger"></span>
+	</div>
+	<div class="mb-3">
+		<label class="form-label">Last Name</label>
+		<input type="text" class="form-control" asp-for="User_Last_Name" />
+		<span asp-validation-for="User_Last_Name" class="text-danger"></span>
+	</div>
+	<div class="mb-3">
+		<label class="form-label">Mobile No</label>
+		<input type="number" class="form-control" asp-for="User_Mobile_No" />
+		<span asp-validation-for="User_Mobile_No" class="text-danger"></span>
+	</div>
+	<div class="d-grid">
+		<button type="submit" class="btn btn-primary">Create User</button>
+	</div>
+</form>
+@section Scripts{
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}
