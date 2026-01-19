@@ -1,4 +1,4 @@
-﻿using interview.DAL;
+using interview.DAL;
 using interview.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -31,7 +31,6 @@ namespace interview.Controllers
             bool res = _dal.Insert_User(model);
             if (res)
             {
-
 
 
 
